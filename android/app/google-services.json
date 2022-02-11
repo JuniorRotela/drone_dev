@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "897577659016",
+    "project_id": "summer-lexicon-318421",
+    "storage_bucket": "summer-lexicon-318421.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897577659016:android:f5156db7a290452a4a8d3d",
+        "android_client_info": {
+          "package_name": "app.meedu.google_maps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897577659016-aqci4oag160l7qpiidg2qlf4g4fq1osq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-DQZTPBNQkWScXSK9jC8kyuNELol6e58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897577659016-aqci4oag160l7qpiidg2qlf4g4fq1osq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
