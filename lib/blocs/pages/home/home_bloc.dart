@@ -108,13 +108,6 @@ class HomeBloc extends Bloc<HomeEvents, HomeState> {
               OnMapPick(isOrigin ? MapPick.origin : MapPick.destination),
             );
           },
-          onMapPicko: (bool isDestino) {
-            add(
-              OnMapPicko(
-                isDestino ? MapPicko.origin : MapPick.destination,
-              ), //
-            );
-          },
         ),
         fullscreenDialog: true);
 
@@ -193,7 +186,6 @@ class HomeBloc extends Bloc<HomeEvents, HomeState> {
     Uint8List bytes = await placeToMarker(origin, duration: null); //marcador
     final Marker originMarker = createMarker(
       id: 'origin',
-
       //origin.position
       position: LatLng(-25.5074407, -54.6150159),
       bytes: bytes,
@@ -271,4 +263,6 @@ class HomeBloc extends Bloc<HomeEvents, HomeState> {
       yield this.state.copyWith(myLocation: event.location);
     }
   }
+
+  void onDestinationChanged(Place place) {}
 }

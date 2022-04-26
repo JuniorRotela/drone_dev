@@ -206,8 +206,7 @@ class _HomePageState extends State<HomePage> {
                                 this._bloc.reverseGeocode(this._at);
                               }
                             },
-                            //  markers: state.markers.values
-                            //  .toSet(), // descomentar para el marcador
+
                             polylines: state.polylines.values.toSet(),
                             polygons: state.polygons.values.toSet(),
                             myLocationButtonEnabled: false,

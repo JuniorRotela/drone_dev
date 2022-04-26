@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_maps/blocs/pages/home/bloc.dart';
 import 'package:google_maps/blocs/pages/home/home_bloc.dart';
 import 'package:google_maps/blocs/pages/home/home_state.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../models/place.dart';
 
@@ -49,8 +50,7 @@ class BottomView extends StatelessWidget {
                   ),
                   onPressed: () {
                     if (confirm) {
-                      //   Place = MapPick.destination(id:{id} , title: title, position: LatLng(coords[0], coords[1]),)
-
+                      
                     } else {
                       bloc.whereYouGo();
                     }
@@ -89,4 +89,8 @@ class BottomView extends StatelessWidget {
       );
     });
   }
+}
+
+class HomeEvent {
+  static HomeEvents confirm({Place origin, Place destination}) {}
 }
