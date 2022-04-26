@@ -17,6 +17,7 @@ import '../blocs/pages/home/bloc.dart';
 import '../pedido/join_screen.dart';
 import 'package:location/location.dart';
 export 'home_page.dart';
+import '../widgets/realtime.dart';
 
 class HomePage extends StatefulWidget {
   final String partyNumber;
@@ -49,7 +50,6 @@ class _HomePageState extends State<HomePage> {
       documentSubscription; // -escuchar personas o estados
   List<Person> pleople = List();
   LatLng _at;
-
   @override
   void initState() {
     super.initState();
@@ -182,12 +182,16 @@ class _HomePageState extends State<HomePage> {
                             compassEnabled: false,
                             myLocationEnabled: true,
 
-                            // markers: pleople.map((e) => Marker(
-                            //         markerId: MarkerId(e.id),
-                            //        position: e.position,
-                            //       ),
-                            //    )
-                            //    .toSet(),
+                            markers: state.markers.values.toSet(),
+                            //people
+                            //.map(
+                            // (e) => Marker(
+                            // markerId: MarkerId(e.id),
+                            //  position: e.position,
+                            // ),
+                            // )
+                            // .toSet(),
+
                             onCameraMoveStarted: () {
                               print("onCameraMoveStarted");
                               if (state.mapPick != MapPick.none) {
@@ -202,8 +206,8 @@ class _HomePageState extends State<HomePage> {
                                 this._bloc.reverseGeocode(this._at);
                               }
                             },
-                            markers: state.markers.values
-                                .toSet(), // descomentar para el marcador
+                            //  markers: state.markers.values
+                            //  .toSet(), // descomentar para el marcador
                             polylines: state.polylines.values.toSet(),
                             polygons: state.polygons.values.toSet(),
                             myLocationButtonEnabled: false,
