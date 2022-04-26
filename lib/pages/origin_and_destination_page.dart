@@ -17,7 +17,6 @@ class OriginAndDestinationPage extends StatefulWidget {
   final List<Place> history;
   final void Function(Place origin) onOriginChanged;
   final void Function(bool isOrigin) onMapPick;
-  final void Function(bool isDestino) onMapPicko; //
 
   final bool hasOriginFocus;
 
@@ -29,7 +28,7 @@ class OriginAndDestinationPage extends StatefulWidget {
     @required this.onOriginChanged,
     @required this.onMapPick,
     this.hasOriginFocus = false,
-    @required this.onMapPicko, //
+    //
   }) : super(key: key);
 
   @override
@@ -52,6 +51,7 @@ class _OriginAndDestinationPageState extends State<OriginAndDestinationPage> {
   TextEditingController _originController, _destinationController;
 
   bool get isOrigin => null;
+
 
   @override
   void initState() {

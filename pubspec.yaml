@@ -46,8 +46,11 @@ dependencies:
   location: ^2.5.0
   uuid: ^1.0.1
   cloud_firestore: ^0.13.4
-  
+  firebase_auth:
+  google_sign_in:
   firebase:
+  firebase_database: 
+  firebase_core:
 
   
   

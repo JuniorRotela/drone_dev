@@ -18,7 +18,6 @@ class HomeState extends Equatable {
   final Map<String, Place> history;
   final Place origin, destination;
   final MapPick mapPick;
-  final MapPicko mapPicko;
   final ReverseGeocodeTask reverseGeocodeTask;
 
   HomeState({
@@ -32,7 +31,6 @@ class HomeState extends Equatable {
     this.destination,
     this.origin,
     this.mapPick,
-    this.mapPicko,
     this.reverseGeocodeTask,
   });
 
@@ -45,7 +43,6 @@ class HomeState extends Equatable {
         history: Map(),
         gpsEnabled: Platform.isIOS,
         mapPick: MapPick.none,
-        mapPicko: MapPicko.none,
       );
 
   HomeState copyWith({
@@ -73,7 +70,6 @@ class HomeState extends Equatable {
       origin: origin ?? this.origin,
       destination: destination ?? this.destination,
       mapPick: mapPick ?? this.mapPick,
-      mapPicko: mapPicko ?? this.mapPicko,
       reverseGeocodeTask: reverseGeocodeTask ?? this.reverseGeocodeTask,
     );
   }
@@ -109,7 +105,6 @@ class HomeState extends Equatable {
         origin,
         destination,
         mapPick,
-        mapPicko,
         polygons,
         reverseGeocodeTask,
       ];
